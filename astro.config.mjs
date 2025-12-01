@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // Get the site URL from environment variable or use a default for local development
 const site = process.env.PUBLIC_SITE_URL || 'http://localhost:4321';
+// const site = process.env.PUBLIC_SITE_URL || 'https://triskeliontraining.com'; //actual public site
 
 export default defineConfig({
   site,
@@ -46,9 +47,9 @@ export default defineConfig({
       {
         protocol: "https"
       },
-      {
-        protocol: "http"
-      }
+      //{
+      //  protocol: "http"
+      //}
     ]
   }
 });

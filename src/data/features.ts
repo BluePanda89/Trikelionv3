@@ -21,34 +21,24 @@ export const featureLists: Record<string, FeatureList> = {
         features: [
             {
                 icon: Zap,
-                title: 'Lightning Fast Performance',
-                description: 'Optimized for speed and performance'
+                title: 'Corporate Training',
+                description: 'Customized programs designed to meet the specific needs of organizations, focusing on leadership, team development, and technical skills.'
             },
             {
-                icon: Shield,
-                title: 'SEO Optimized Structure',
-                description: 'Built with SEO best practices in mind'
+                icon: Zap,
+                title: 'Professional Development',
+                description: 'Customized programs designed to meet the specific needs of organizations, focusing on leadership, team development, and technical skills.'
             },
             {
-                icon: TabletSmartphone,
-                title: 'Responsive by Default',
-                description: 'Mobile-friendly out of the box'
+                icon: Zap,
+                title: 'Certification Programs',
+                description: 'Customized programs designed to meet the specific needs of organizations, focusing on leadership, team development, and technical skills.'
             },
             {
-                icon: Smile,
-                title: 'Easy Customization',
-                description: 'Customize the theme to your liking'
+                icon: Zap,
+                title: 'Team Building',
+                description: 'Programs that are designed to improve teamwork, communication and overall group dynamics within an organization.'
             },
-            {
-                icon: Type,
-                title: 'TypeScript Support',
-                description: 'Built with TypeScript in mind'
-            },
-            {
-                icon: CodeXml,
-                title: 'Minimal Dependencies',
-                description: 'Keep your project lightweight'
-            }
         ]
     },
     secondary: {

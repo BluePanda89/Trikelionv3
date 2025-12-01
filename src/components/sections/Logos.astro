@@ -41,17 +41,17 @@ const paddingClass = getPaddingClass({
                 className="text-center"
             />
         )}
-        <div class="flex flex-wrap justify-center gap-16">
+        <div class="flex flex-wrap justify-center gap-8">
             {logos.map((logo, index) => (
                 <div 
-                    class="logo-wrapper flex justify-center items-center w-32 h-20"
+                    class="logo-wrapper flex justify-center items-center w-64 h-40"
                     data-aos="fade-up"
                     data-aos-delay={index * 100}
                 >
                     <Image 
                         src={logo.src} 
                         alt={logo.alt}
-                        class="h-8 md:h-10 w-auto transition-all duration-300 object-contain object-center filter grayscale hover:grayscale-0 opacity-75 hover:opacity-100"
+                        class="h-40 md:h-40 w-auto object-contain object-center"
                         width={200}
                         height={80}
                     />
