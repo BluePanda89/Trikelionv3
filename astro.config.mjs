@@ -3,12 +3,13 @@ import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from '@astrojs/sitemap';
 
+
 // Get the site URL from environment variable or use a default for local development
 // const site = process.env.PUBLIC_SITE_URL || 'http://localhost:4321';
 const site = process.env.PUBLIC_SITE_URL || 'https://bluepanda89.github.io/Trikelionv3/'; //actual public site
 
 export default defineConfig({
-  site,
+  site: 'https://bluepanda89.github.io/Trikelionv3/';
   vite: {
     plugins: [tailwindcss()],
     css: {
