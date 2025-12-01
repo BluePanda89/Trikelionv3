@@ -8,8 +8,9 @@ import sitemap from '@astrojs/sitemap';
 // const site = process.env.PUBLIC_SITE_URL || 'http://localhost:4321';
 const site = process.env.PUBLIC_SITE_URL || 'https://bluepanda89.github.io/Trikelionv3/'; //actual public site
 
+
 export default defineConfig({
-  site: 'https://bluepanda89.github.io/Trikelionv3/';
+  site,
   vite: {
     plugins: [tailwindcss()],
     css: {
