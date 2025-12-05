@@ -1,16 +1,53 @@
 ---
 import Layout from "@layouts/Layout.astro"
+import Hero from "@components/sections/Hero.astro"
 import InnerHero from "@components/sections/InnerHero.astro"
-import TechSpecs from "./AboutUs.astro"
+import heroImage from '@assets/images/home/default-hero-2.jpg';
+//import Features from "@components/sections/Features.astro";
+//import { FeatureList } from "@data/features";
+import styleGuideImage from '@assets/images/aboutus_training.jpg';
+import founderImage from '@assets/images/aboutus_george.png';
+import SplitPanel from '@components/sections/SplitPanel.astro';
+//import ContactInfo from "@components/sections/ContactInfo.astro"
 
 const heroContent = {
-    title: "About Us",
-    description: "Who We Are",
+    title: 'About Us',
+    description: 'Unlock potential with tailored training programs designed for today’s dynamic business environment.',
+    backgroundImage: heroImage,
+    overlayOpacity: 0.2
 }
+
+const styleGuideSection = {
+    //eyebrow: "Bong SL Oun",
+    headline: "Discover Triskelion Training & Consulting: Your Partner in Growth",
+    description: "Founded in 2024, Triskelion Training& Consulting is committed to delivering high-quality, tailored training experiences that empower individuals and organisations. Our innovative methodologies and industry expertise ensure that participants acquire essential skills to excel in a rapidly evolving professional landscape. We have successfully helped numerous clients enhance their team performance and individual capabilities, leading to measurable improvements in productivity and employee satisfaction. Our tailored programmes are designed to meet the needs of diverse organisations.",
+    image: {
+        src: styleGuideImage,
+        alt: "Featured image"
+    },
+    //buttons: [
+    //    {
+    //        text: "Explore Style Guide",
+    //        link: "/style-guide",
+    //        variant: "primary" as const
+    //    }
+    //]
+}
+
+const styleGuideSection2 = {
+    eyebrow: "Our Founder",
+    headline: "George Mervyn Fernandez",
+    description: "Welcome to Triskelion, a dynamic training company dedicated to empowering individuals and organizations through innovative learning experiences. Founded by George, a passionate educator and industry expert, Triskelion is built on the belief that continuous growth and development are essential for success in today’s fast-paced world.With a diverse range of training programs tailored to meet the unique needs of clients, George’s vision is to create a supportive and engaging environment where participants can enhance their skills, boost their confidence, and achieve their professional goals. At Triskelion, we are committed to fostering aculture of lifelong learning and collaboration, helpingyou unlock your full potential.Developed by Triskelion Training & Consulting @ 2021.",
+    image: {
+        src: founderImage,
+        alt: "Founder"
+    },
+}
+
 ---
-
-<Layout>
-    <InnerHero content={heroContent} />
-    <TechSpecs />
+<Layout title="About Us" description="Company Profile">
+    <Hero content={heroContent} />
+    <SplitPanel content={styleGuideSection} imagePosition="right" background="light" padding="base" />
+    <SplitPanel content={styleGuideSection2} imagePosition="left" background="light" padding="base" />
+    <!-- <InnerHero content={heroContent} /> -->
 </Layout>
-

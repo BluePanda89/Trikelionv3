@@ -15,7 +15,7 @@ export const siteConfig = {
 export const SEO = {
   Separator: '|',
   SiteName: 'Triskelion Training',
-  defaultDescription: 'Empower Your Workforce for Sucess',
+  defaultDescription: 'Empower Your Workforce for Success',
 };
   
 export const blogSetting = {

@@ -7,7 +7,7 @@ type Props = HTMLAttributes<'div'> & {
 }
 const { open } = Astro.props
 ---
-<titan-details open={open} {...Astro.props}>
+<tris-details open={open} {...Astro.props}>
     <h3 class="w-full text-left">
         <button class="group w-full flex items-center justify-between cursor-pointer" aria-expanded={!!open}>
             <slot name="heading"/>
@@ -18,14 +18,14 @@ const { open } = Astro.props
     <div class="content grid grid-rows-[0fr] transition-all duration-200 ease-out" aria-hidden={!open}>
         <slot/>
     </div>
-</titan-details>
+</tris-details>
 
 <style>
-    titan-details {
+    tris-details {
         display: block;
     }
 
-    titan-details[open] button svg.lucide-plus, titan-details:not([open]) button svg.lucide-minus {
+    tris-details[open] button svg.lucide-plus, tris-details:not([open]) button svg.lucide-minus {
         display: none;
     }
 
@@ -37,14 +37,14 @@ const { open } = Astro.props
         grid-template-rows: 0fr;
     }
 
-    titan-details[open] .content {
+    tris-details[open] .content {
         grid-template-rows: 1fr;
     }
 </style>
 
 <script>
   // noinspection JSUnusedGlobalSymbols
-  class TitanDetails extends HTMLElement {
+  class TrisDetails extends HTMLElement {
     get open () {
       return this.hasAttribute('open')
     }
@@ -88,5 +88,5 @@ const { open } = Astro.props
     }
   }
 
-  customElements.define('titan-details', TitanDetails)
+  customElements.define('tris-details', TrisDetails)
 </script>

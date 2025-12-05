@@ -3,7 +3,7 @@
 export const headerMenu = [
     { name: 'About Us', link: '/aboutus' },
     { name: 'Our Services', link: '/services' },
-    { name: 'Our Training', link: '/training' }
+    { name: 'Our Training', link: '/training' },
     //{ name: 'Style-Guide', link: '/style-guide', showArrow: false,
     //    children: [
     //        { name: 'Typography', link: '/style-guide#typography' },
