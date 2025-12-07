@@ -8,153 +8,87 @@ import { featureLists } from '@data/features';
 import { statsLists } from '@data/stats';
 import Logos from '@components/sections/Logos.astro';
 import { logoLists } from '@data/logos';
-import CtaBanner from '@components/sections/CtaBanner.astro';
-import Faqs from '@components/sections/Faqs.astro';
-import { faqLists } from '@data/faqs';
-import RecentPosts from '@components/sections/RecentPosts.astro';
-import heroImage from '../assets/images/home/default-hero-2.jpg';
-import styleGuideImage from '../assets/images/home/developer.jpg';
+import mainBackground from '../assets/images/mainpage_bg.png';
 import maingroupImage from '@assets/images/main-groupaboutus.png';
 
-const seoTitle = "Search enginee optimization keyword here";
-const seoDescription = "Triskelion Training and Consultation";
+const seoTitle = 'Triskelion';
+const seoDescription = 'Triskelion Training and Consultation';
 
-// to change background
 const heroContent = {
     title: 'Triskelion Training & Consulting',
-    description: 'Unlock potential with tailored training programs designed for today’s dynamic business environment.',
+    description: 'Unlock potential with tailored training programs designed for today dynamic business environment.',
     buttons: [
         {
             text: 'View More',
             link: '/training',
-            target: '_self'
+            target: '_self',
         },
     ],
-    backgroundImage: heroImage,
-    overlayOpacity: 0.2
-}
+    backgroundImage: mainBackground,
+    overlayOpacity: 0.3,
+};
 
 const featuresSection = {
     //eyebrow: "CORE FEATURES",
-    title: "Our Comprehensive Training Solutions",
-    description: "Explore our tailored programmes designed to enhance skills for individuals and teams alike.",
+    title: 'Our Comprehensive Training Solutions',
+    description: 'Explore our tailored programmes designed to enhance skills for individuals and teams alike.',
     features: featureLists.main.features,
-    //button: {
-    //    text: "View Theme Info",
-    //    link: "/theme-info",
-    //    variant: "primary" as const
-    //}
-}
+};
 
 const featuresSection2 = {
     //eyebrow: "CORE FEATURES",
-    title: "Our Strength",
-    description: "Explore our tailored programmes designed to enhance skills for individuals and teams alike.",
+    title: 'Our Strength',
+    description: 'Explore our tailored programmes designed to enhance skills for individuals and teams alike.',
     features: featureLists.main.features,
-    //button: {
-    //    text: "View Theme Info",
-    //    link: "/theme-info",
-    //    variant: "primary" as const
-    //}
-}
+};
 
 const styleGuideSection = {
-    eyebrow: "Founded in 2024",
-    headline: "Discover the Story Behind Triskelion Training & Consulting.",
-    description: "we provide innovative learning experiences that foster skills for personal and professional development.",
+    eyebrow: 'Founded in 2024',
+    headline: 'Discover the Story Behind Triskelion Training & Consulting.',
+    description:
+        'we provide innovative learning experiences that foster skills for personal and professional development.',
     image: {
         src: maingroupImage,
-        alt: "Group Photo"
+        alt: 'Group Photo',
     },
     buttons: [
         {
-            text: "Findout More",
-            link: "/aboutus",
-            variant: "primary" as const
-        }
-    ]
-}
+            text: 'Findout More',
+            link: '/aboutus',
+            variant: 'primary' as const,
+        },
+    ],
+};
 
-// Main page independent footer，superseeded by global FooterCta
-
-const FooterCta = {
-    eyebrow: "GET STARTED TODAY",
-    title: 'Start Your Learning Journey Now',
-    description: 'Contact us to discover how our training can elevate your career and organisation.',
-    hideCta: false,
-    button: {
-            text: 'Primary Action',
-            link: '/contact',
-            target: '_self'
-    }
-}
-
-
-
- const sideBySideStats = {
+const sideBySideStats = {
     //eyebrow: "Stats",
-    title: "Our Successful Story",
-    description: "Take a look at our impactful training initiatives and successful collaborations.",
+    title: 'Our Successful Story',
+    description: 'Take a look at our impactful training initiatives and successful collaborations.',
     variant: 'side-by-side' as const,
     stats: statsLists.withContent.stats,
     content: {
-        title: "Our Successful Story",
-        description: "Take a look at our impactful training initiatives and successful collaborations.",
+        title: 'Our Successful Story',
+        description: 'Take a look at our impactful training initiatives and successful collaborations.',
         button: {
-            text: "List of Courses",
-            link: "/training",
-            variant: "primary" as const
-        }
-    }
- };
-
-const mainCta = {
-    eyebrow: "Build Blocks",
-    title: "Ready-to-Use Components",
-    description: "Save development time with our pre-built, accessible components. Each one is designed to integrate seamlessly with your projects while maintaining excellent performance.",
-    button: {
-        text: "View All Components",
-        link: "/components",
-        variant: "primary" as const,
-        target: "_self" as const
-    }
+            text: 'List of Courses',
+            link: '/training',
+            variant: 'primary' as const,
+        },
+    },
 };
 
 //Done
 const logosSection = {
-    eyebrow: "Our Client",
-    logos: logoLists.main.logos
-}
-
-//Disabled
-//const faqsSection = {
-//    eyebrow: "FAQs",
-//    title: 'Frequently Asked Questions',
-//    description: 'Find answers to common questions about our platform and services.',
-//    faqs: faqLists.main.faqs
-//}
-
-// Disabled
-// const recentPostsSection = {
-//     eyebrow: "LATEST INSIGHTS",
-//    title: " Learn From Our Experience",
-//    description: "Explore our latest articles on Astro JS development, theme customization tips, and web performance best practices.",
-//    button: {
-//            text: "View All Posts",
-//            link: "/blog",
-//        variant: "primary" as const
-//    }
-//}
+    eyebrow: 'Our Client',
+    logos: logoLists.main.logos,
+};
 ---
 
-<Layout footerCta={FooterCta} title={seoTitle} description={seoDescription}>
-    <Hero content={heroContent} /> <!-- background -->
-    <Features content={featuresSection} padding="base" background="light" /> <!-- Offer in brief -->
-    <SplitPanel content={styleGuideSection} imagePosition="right" background="light" padding="base" />
-    <Stats content={sideBySideStats} background='dark' padding="base"/> <!-- touch up needed -->
-    <Features content={featuresSection2} padding="base" background="light" />
-    <!--  <RecentPosts content={recentPostsSection} background="base" padding="base" postsToShow={3} category="Theme Usage"/>
-    <CtaBanner content={mainCta} variant="contained" background="light" paddingBottom="base" /> -->
-    <Logos content={logosSection} background="base" padding='small'/> <!-- Done -->
-    <!-- <Faqs content={faqsSection} background="base" padding="base" /> -->
+<Layout title={seoTitle} description={seoDescription}>
+    <Hero content={heroContent} />
+    <Features content={featuresSection} padding="small" background="light" />
+    <SplitPanel content={styleGuideSection} imagePosition="right" background="dark" padding="small" />
+    <Stats content={sideBySideStats} background="light" padding="small" />
+    <Features content={featuresSection2} padding="small" background="dark" />
+    <Logos content={logosSection} background="light" padding="small" />
 </Layout>

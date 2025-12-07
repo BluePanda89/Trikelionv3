@@ -25,12 +25,12 @@ export const featureLists: Record<string, FeatureList> = {
                 description: 'Customized programs designed to meet the specific needs of organizations, focusing on leadership, team development, and technical skills.'
             },
             {
-                icon: Zap,
+                icon: Shield,
                 title: 'Professional Development',
                 description: 'Customized programs designed to meet the specific needs of organizations, focusing on leadership, team development, and technical skills.'
             },
             {
-                icon: Zap,
+                icon: CodeXml,
                 title: 'Certification Programs',
                 description: 'Customized programs designed to meet the specific needs of organizations, focusing on leadership, team development, and technical skills.'
             },

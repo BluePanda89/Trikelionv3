@@ -1,6 +1,6 @@
 export const siteConfig = {
   companyName: 'Triskelion Training',
-  siteUrl: 'https://triskeliontraining.com',
+  siteUrl: 'https://tris-dev.vionyta.com',
   Socials: {
       //xSocial: 'https://x.com/astrodotbuild',
       //Github: 'https://github.com/withastro',
@@ -14,7 +14,7 @@ export const siteConfig = {
 
 export const SEO = {
   Separator: '|',
-  SiteName: 'Triskelion Training',
+  SiteName: 'Triskelion Training Development Server',
   defaultDescription: 'Empower Your Workforce for Success',
 };
   
