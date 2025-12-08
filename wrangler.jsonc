@@ -1,6 +1,6 @@
 {
   "main": "dist/_worker.js/index.js",
-  "name": "triskelion-dev",
+  "name": "triskelionv3",
   // Update to today's date
   "compatibility_date": "2025-11-18",
   "compatibility_flags": [
@@ -11,7 +11,6 @@
     "binding": "ASSETS",
     "directory": "./dist"
   },
-
   "observability": {
     "enabled": true
   }

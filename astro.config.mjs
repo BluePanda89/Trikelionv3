@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-//import cloudflare from '@astrojs/cloudflare';
+import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 
 
@@ -17,9 +17,9 @@ export default defineConfig({
   experimental: {
     contentIntellisense: true,
   },
-  //adapter: cloudflare({
-  //  imageService: 'compile',
-  //}),
+  adapter: cloudflare({
+    imageService: 'compile',
+  }),
   site,
   vite: {
     plugins: [tailwindcss()],
