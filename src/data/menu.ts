@@ -6,7 +6,7 @@ export interface NavItem {
     link: string;
     showArrow?: boolean;
     children?: NavItem[];
-};
+}
 // header no chiuld end
 
 export const headerMenu: NavItem[] = [
@@ -15,12 +15,9 @@ export const headerMenu: NavItem[] = [
     { name: 'Our Training', link: '/training' },
 ];
 
-export const footerMenu = [
-    { name: 'Contact Us', link: '/contact' },
-];
+export const footerMenu = [{ name: 'Contact Us', link: '/contact' }];
 
 export const legalMenu = [
     { name: 'Privacy Policy', link: '/legal/privacy-policy' },
-    { name: 'Terms of Service', link: '/legal/terms-of-service' }
+    { name: 'Terms of Service', link: '/legal/terms-of-service' },
 ];
-

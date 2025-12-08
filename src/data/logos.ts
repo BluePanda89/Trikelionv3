@@ -20,7 +20,6 @@ import tabunghaji from '../assets/images/logos/TabungHaji.png';
 import tudm from '../assets/images/logos/TUDM.png';
 import unikl from '../assets/images/logos/UniKL.png';
 
-
 export interface Logo {
     src: ImageMetadata;
     alt: string; // The partner company's name

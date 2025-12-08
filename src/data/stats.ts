@@ -38,9 +38,9 @@ export const statsLists: Record<string, StatsList> = {
             {
                 value: 500000,
                 label: 'Lines of Code',
-                prefix: '+'
-            }
-        ]
+                prefix: '+',
+            },
+        ],
     },
     withContent: {
         id: 'withContent',
@@ -52,7 +52,7 @@ export const statsLists: Record<string, StatsList> = {
             {
                 value: 14.53,
                 label: 'Core Bundle Size',
-                suffix: 'KB'
+                suffix: 'KB',
             },
             {
                 value: 11,
@@ -62,8 +62,8 @@ export const statsLists: Record<string, StatsList> = {
                 value: 10,
                 label: 'Build Time',
                 prefix: '<100',
-                suffix: 's'
-            }
-        ]
-    }
+                suffix: 's',
+            },
+        ],
+    },
 };

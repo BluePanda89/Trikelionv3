@@ -1,15 +1,15 @@
 ---
-title: "How to add/remove categories"
-excerpt: "Learn how to add/remove categories"
-featuredImage: "./images/update-categories.jpg"
-publishDate: "2025-02-22"
+title: 'How to add/remove categories'
+excerpt: 'Learn how to add/remove categories'
+featuredImage: './images/update-categories.jpg'
+publishDate: '2025-02-22'
 publish: true
-categories: ["Theme Usage"]
+categories: ['Theme Usage']
 
 seo:
-  title: "How to add/remove categories"
-  description: "Learn how to add/remove categories"
-  image: "./images/update-categories.jpg"
+    title: 'How to add/remove categories'
+    description: 'Learn how to add/remove categories'
+    image: './images/update-categories.jpg'
 ---
 
 Categories are a crucial part of organizing your content and helping users navigate your site. This post will guide you through the process of editing categories in your theme, using the `categories.ts` file.
@@ -26,8 +26,8 @@ Here's an example of what a category object looks like:
 
 ```typescript
 export const categories = [
-  { name: 'Category 1', slug: 'category-1', description: 'Description of Category 1' },
-  { name: 'Category 2', slug: 'category-2', description: 'Description of Category 2' },
+    { name: 'Category 1', slug: 'category-1', description: 'Description of Category 1' },
+    { name: 'Category 2', slug: 'category-2', description: 'Description of Category 2' },
 ];
 ```
 
@@ -40,8 +40,8 @@ For example, to update the description of the "Tech" category:
 
 ```typescript
 export const categories = [
-  { name: 'Tech', slug: 'tech', description: 'All things tech-related' },
-  { name: 'Design', slug: 'design', description: 'Design tips and tutorials' },
+    { name: 'Tech', slug: 'tech', description: 'All things tech-related' },
+    { name: 'Design', slug: 'design', description: 'Design tips and tutorials' },
 ];
 ```
 
@@ -53,8 +53,5 @@ export const categories = [
 For example, to add a new category called "Marketing":
 
 ```typescript
-export const categories = [
-  ...existingCategories,
-  { name: 'Marketing', slug: 'marketing', description: 'Marketing tips and tutorials' },
-];
+export const categories = [...existingCategories, { name: 'Marketing', slug: 'marketing', description: 'Marketing tips and tutorials' }];
 ```

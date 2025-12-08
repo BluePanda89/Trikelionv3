@@ -13,15 +13,17 @@ if (isNaN(dateObj.getTime())) {
     throw new Error('Invalid date provided to Date component');
 }
 
-const formattedDate = dateObj.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-}).replace(/(\d+)(?=(,))/, (match: string) => {
-    const day = parseInt(match);
-    const suffix = ['th', 'st', 'nd', 'rd'][(day % 10 > 3 || day > 20) ? 0 : day % 10];
-    return day + suffix;
-});
+const formattedDate = dateObj
+    .toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    })
+    .replace(/(\d+)(?=(,))/, (match: string) => {
+        const day = parseInt(match);
+        const suffix = ['th', 'st', 'nd', 'rd'][day % 10 > 3 || day > 20 ? 0 : day % 10];
+        return day + suffix;
+    });
 ---
 
 <time datetime={dateObj.toISOString()} class="text-sm text-body-base">
