@@ -1,13 +1,13 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import cloudflare from '@astrojs/cloudflare';
+//import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 
 
 // Get the site URL from environment variable or use a default for local development
 //const site = process.env.LOCAL_SITE_URL || 'http://localhost:4321';
 const site = process.env.PUBLIC_SITE_URL || 'https://tris-dev.vionyta.com'; //actual public site
-const siteLocal = process.env.LOCAL_SITE_URL || 'http://localhost:4321'; //local site for development
+//const siteLocal = process.env.LOCAL_SITE_URL || 'http://localhost:4321'; //local site for development
 
 export default defineConfig({
   output: 'static', // or 'static' 'server'
@@ -17,9 +17,9 @@ export default defineConfig({
   experimental: {
     contentIntellisense: true,
   },
-  adapter: cloudflare({
-    imageService: 'compile',
-  }),
+  //adapter: cloudflare({
+  //  imageService: 'compile',
+  //}),
   site,
   vite: {
     plugins: [tailwindcss()],

@@ -1,4 +1,4 @@
-import { Zap, Shield, Heart, Coffee, Smile, Type, TabletSmartphone, CodeXml } from 'lucide-astro';
+import { Zap, Shield, Heart, Coffee, Smile, CodeXml } from 'lucide-astro'; //Type, TabletSmartphone,
 
 // Define the LucideIcon type based on the structure of Lucide icons
 type LucideIcon = typeof Zap;
