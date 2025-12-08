@@ -17,12 +17,14 @@ export default defineConfig({
   experimental: {
     contentIntellisense: true,
   },
-  adapter: cloudflare({
-    imageService: 'compile',
-    platformProxy: {
-      enabled: true,
-    }
-  }),
+
+  //adapter: cloudflare({
+  //  imageService: 'compile',
+  //  platformProxy: {
+  //    enabled: true,
+  //  }
+  //}),
+
   site,
   vite: {
     plugins: [tailwindcss()],
