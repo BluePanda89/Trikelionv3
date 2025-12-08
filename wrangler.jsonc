@@ -7,14 +7,13 @@
     "nodejs_compat",
     "global_fetch_strictly_public"
   ],
-  "assets": {
-    "binding": "ASSETS",
-    "directory": "./dist"
-  },
+  //"assets": {
+  //  "binding": "ASSETS",
+  //  "directory": "./dist"
+  //},
   "observability": {
     "enabled": true
   },
   "pages_build_output_dir": "./dist",
   "account_id": "2551b5fd306a0d48bb337cca6d6c937f",
-  "project_name": "tris-dev"
 }

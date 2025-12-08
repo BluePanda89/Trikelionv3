@@ -18,12 +18,12 @@ export default defineConfig({
     contentIntellisense: true,
   },
 
-  //adapter: cloudflare({
-  //  imageService: 'compile',
-  //  platformProxy: {
-  //    enabled: true,
-  //  }
-  //}),
+  adapter: cloudflare({
+    imageService: 'compile',
+    platformProxy: {
+      enabled: true,
+    }
+  }),
 
   site,
   vite: {
@@ -34,6 +34,9 @@ export default defineConfig({
           additionalData: `@import "aos/dist/aos.css";`
         }
       }
+    },
+    build: {
+      minify: false,
     },
     optimizeDeps: {
       include: ['aos']
