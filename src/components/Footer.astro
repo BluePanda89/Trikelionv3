@@ -3,7 +3,7 @@ import { footerMenu, legalMenu } from '@data/menu';
 import Logo from '@components/Logo.astro';
 //import Button from '@components/ui/Button.astro';
 import { siteConfig } from '@data/config';
-//import mainLogo from '../assets/images/home/Tris_Logo.png';
+//import mainLogo from '@assets/images/home/Tris_Logo.png';
 
 interface ButtonProps {
     text: string;
@@ -40,7 +40,6 @@ const defaultCta = {
 
 <footer class={`text-white pb-small `}>
     <div class="site-container mx-auto px-4">
-
         <div class="grid grid-cols-4 md:grid-cols-4 gap-8 pb-8 border-b border-background-light">
             <div class="column col-span-4">
                 <Logo variant="footer" />

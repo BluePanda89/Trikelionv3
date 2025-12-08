@@ -8,7 +8,7 @@
             },
             {
                 "name": "categories",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/categories.ts",
+                "path": "@src/data/categories.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -16,7 +16,7 @@
         "getCategoryBySlug": [
             {
                 "name": "getCategoryBySlug",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/categories.ts",
+                "path": "@src/data/categories.ts",
                 "type": "function",
                 "isDefault": false
             }
@@ -24,7 +24,7 @@
         "Feature": [
             {
                 "name": "Feature",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/features.ts",
+                "path": "@src/data/features.ts",
                 "type": "interface",
                 "isDefault": false
             }
@@ -32,7 +32,7 @@
         "FeatureList": [
             {
                 "name": "FeatureList",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/features.ts",
+                "path": "@src/data/features.ts",
                 "type": "interface",
                 "isDefault": false
             }
@@ -40,7 +40,7 @@
         "featureLists": [
             {
                 "name": "featureLists",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/features.ts",
+                "path": "@src/data/features.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -104,7 +104,7 @@
         "headerMenu": [
             {
                 "name": "headerMenu",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/menu.ts",
+                "path": "@src/data/menu.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -112,7 +112,7 @@
         "footerMenu": [
             {
                 "name": "footerMenu",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/menu.ts",
+                "path": "@src/data/menu.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -120,7 +120,7 @@
         "legalMenu": [
             {
                 "name": "legalMenu",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/menu.ts",
+                "path": "@src/data/menu.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -128,7 +128,7 @@
         "FaqItem": [
             {
                 "name": "FaqItem",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/faqs.ts",
+                "path": "@src/data/faqs.ts",
                 "type": "interface",
                 "isDefault": false
             }
@@ -136,7 +136,7 @@
         "FaqList": [
             {
                 "name": "FaqList",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/faqs.ts",
+                "path": "@src/data/faqs.ts",
                 "type": "interface",
                 "isDefault": false
             }
@@ -144,7 +144,7 @@
         "faqLists": [
             {
                 "name": "faqLists",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/faqs.ts",
+                "path": "@src/data/faqs.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -152,7 +152,7 @@
         "Stat": [
             {
                 "name": "Stat",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/stats.ts",
+                "path": "@src/data/stats.ts",
                 "type": "interface",
                 "isDefault": false
             }
@@ -160,7 +160,7 @@
         "StatsList": [
             {
                 "name": "StatsList",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/stats.ts",
+                "path": "@src/data/stats.ts",
                 "type": "interface",
                 "isDefault": false
             }
@@ -168,7 +168,7 @@
         "statsLists": [
             {
                 "name": "statsLists",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/stats.ts",
+                "path": "@src/data/stats.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -183,7 +183,7 @@
         "PaddingSize": [
             {
                 "name": "PaddingSize",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/utils/styleUtils.ts",
+                "path": "@src/utils/styleUtils.ts",
                 "type": "type",
                 "isDefault": false
             }
@@ -191,7 +191,7 @@
         "ThemeColor": [
             {
                 "name": "ThemeColor",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/utils/styleUtils.ts",
+                "path": "@src/utils/styleUtils.ts",
                 "type": "type",
                 "isDefault": false
             }
@@ -199,7 +199,7 @@
         "getPaddingClass": [
             {
                 "name": "getPaddingClass",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/utils/styleUtils.ts",
+                "path": "@src/utils/styleUtils.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -207,7 +207,7 @@
         "getBackgroundColor": [
             {
                 "name": "getBackgroundColor",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/utils/styleUtils.ts",
+                "path": "@src/utils/styleUtils.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -215,7 +215,7 @@
         "getTextColor": [
             {
                 "name": "getTextColor",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/utils/styleUtils.ts",
+                "path": "@src/utils/styleUtils.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -223,7 +223,7 @@
         "getHeadlineColor": [
             {
                 "name": "getHeadlineColor",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/utils/styleUtils.ts",
+                "path": "@src/utils/styleUtils.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -231,7 +231,7 @@
         "getEyebrowColor": [
             {
                 "name": "getEyebrowColor",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/utils/styleUtils.ts",
+                "path": "@src/utils/styleUtils.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -239,7 +239,7 @@
         "getInputBackgroundColor": [
             {
                 "name": "getInputBackgroundColor",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/utils/styleUtils.ts",
+                "path": "@src/utils/styleUtils.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -247,7 +247,7 @@
         "getInputTextColor": [
             {
                 "name": "getInputTextColor",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/utils/styleUtils.ts",
+                "path": "@src/utils/styleUtils.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -255,7 +255,7 @@
         "collections": [
             {
                 "name": "collections",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/content.config.ts",
+                "path": "@src/content.config.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -284,7 +284,7 @@
         "siteConfig": [
             {
                 "name": "siteConfig",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/config.ts",
+                "path": "@src/data/config.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -292,7 +292,7 @@
         "SEO": [
             {
                 "name": "SEO",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/config.ts",
+                "path": "@src/data/config.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -300,7 +300,7 @@
         "blogSetting": [
             {
                 "name": "blogSetting",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/config.ts",
+                "path": "@src/data/config.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -308,7 +308,7 @@
         "themeSetting": [
             {
                 "name": "themeSetting",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/config.ts",
+                "path": "@src/data/config.ts",
                 "type": "const",
                 "isDefault": false
             }
@@ -461,7 +461,7 @@
         "Logo": [
             {
                 "name": "Logo",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/logos.ts",
+                "path": "@src/data/logos.ts",
                 "type": "interface",
                 "isDefault": false
             }
@@ -469,7 +469,7 @@
         "LogoList": [
             {
                 "name": "LogoList",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/logos.ts",
+                "path": "@src/data/logos.ts",
                 "type": "interface",
                 "isDefault": false
             }
@@ -477,7 +477,7 @@
         "logoLists": [
             {
                 "name": "logoLists",
-                "path": "/Users/waikitong168/Projects/triskelionv3/src/data/logos.ts",
+                "path": "@src/data/logos.ts",
                 "type": "const",
                 "isDefault": false
             }
