@@ -4,91 +4,27 @@ import Hero from '@components/sections/Hero.astro';
 import SplitPanel from '@components/sections/SplitPanel.astro';
 import Features from '@components/sections/Features.astro';
 import Stats from '@components/sections/Stats.astro';
-import { featureLists } from '@data/features';
-import { statsLists } from '@data/stats';
 import Logos from '@components/sections/Logos.astro';
-import { logoLists } from '@data/logos';
-import mainBackground from '@assets/images/mainpage_bg.png';
-import maingroupImage from '@assets/images/main-groupaboutus.png';
 
-const seoTitle = 'Triskelion';
-const seoDescription = 'Triskelion Training and Consultation';
-
-const heroContent = {
-    title: 'Triskelion Training & Consulting',
-    description: 'Unlock potential with tailored training programs designed for today dynamic business environment.',
-    buttons: [
-        {
-            text: 'View More',
-            link: '/training',
-            target: '_self',
-        },
-    ],
-    backgroundImage: mainBackground,
-    overlayOpacity: 0.3,
-};
-
-const featuresSection = {
-    //eyebrow: "CORE FEATURES",
-    title: 'Our Comprehensive Training Solutions',
-    description: 'Explore our tailored programmes designed to enhance skills for individuals and teams alike.',
-    features: featureLists.main.features,
-};
-
-const featuresSection2 = {
-    //eyebrow: "CORE FEATURES",
-    title: 'Our Strength',
-    description: 'Explore our tailored programmes designed to enhance skills for individuals and teams alike.',
-    features: featureLists.main.features,
-};
-
-const styleGuideSection = {
-    eyebrow: 'Founded in 2024',
-    headline: 'Discover the Story Behind Triskelion Training & Consulting.',
-    description:
-        'we provide innovative learning experiences that foster skills for personal and professional development.',
-    image: {
-        src: maingroupImage,
-        alt: 'Group Photo',
-    },
-    buttons: [
-        {
-            text: 'Findout More',
-            link: '/aboutus',
-            variant: 'primary' as const,
-        },
-    ],
-};
-
-const sideBySideStats = {
-    //eyebrow: "Stats",
-    title: 'Our Successful Story',
-    description: 'Take a look at our impactful training initiatives and successful collaborations.',
-    variant: 'side-by-side' as const,
-    stats: statsLists.withContent.stats,
-    content: {
-        title: 'Our Successful Story',
-        description: 'Take a look at our impactful training initiatives and successful collaborations.',
-        button: {
-            text: 'List of Courses',
-            link: '/training',
-            variant: 'primary' as const,
-        },
-    },
-};
-
-//Done
-const logosSection = {
-    eyebrow: 'Our Client',
-    logos: logoLists.main.logos,
-};
+// ✅ New Clean Import
+import {
+    seoTitle,
+    seoDescription,
+    heroContent,
+    featuresSection,
+    featuresSection2,
+    styleGuideSection,
+    sideBySideStats,
+    logosSection,
+    FooterCta,
+} from '@data/home';
 ---
 
-<Layout title={seoTitle} description={seoDescription}>
+<Layout footerCta={FooterCta} title={seoTitle} description={seoDescription}>
     <Hero content={heroContent} />
     <Features content={featuresSection} padding="small" background="light" />
     <SplitPanel content={styleGuideSection} imagePosition="right" background="base" padding="small" />
     <Features content={featuresSection2} padding="small" background="light" />
-    <Stats content={sideBySideStats} background="base" padding="small" />
+    <Stats content={sideBySideStats} background="base" padding="base" />
     <Logos content={logosSection} background="light" padding="small" />
 </Layout>
