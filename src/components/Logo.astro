@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 //import logo from '../assets/astro.svg';
-import trilogo from '@assets/images/Triskelion_Logo.png';
+import trilogo from 'public/tris_logo_Nav.png';
 
 interface Props {
     variant?: 'header' | 'footer' | 'dark';
@@ -30,6 +30,6 @@ const getLogoClass = () => {
         // Please, use something like your company name or “Home”, not “logo.”
         // If there is link text, leave alt empty.
     }
-    <Image src={trilogo} alt="Home" class="hidden" />
-    <span class="font-bold">Triskelion</span>
+    <Image src={trilogo} alt="" height={30} />
+    <!-- <span class="font-bold">Triskelion</span> -->
 </a>

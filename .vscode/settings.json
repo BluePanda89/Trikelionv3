@@ -8,7 +8,7 @@
     "scm.alwaysShowRepositories": true,
     "terminal.integrated.cwd": "/Users/waikitong168/Projects",
     "notebook.codeActionsOnSave": {},
-    "css.format.braceStyle": "expand",
+    "css.format.braceStyle": "collapse",
     "files.autoSave": "off",
     "files.autoSaveDelay": 1000,
     "accessibility.accessibleView.closeOnKeyPress": false,
@@ -42,5 +42,7 @@
         "**/.git": false,
         "**/.hg": false,
         "**/.svn": false
-    }
+    },
+    "css.format.newlineBetweenRules": false,
+    "css.format.spaceAroundSelectorSeparator": true
 }

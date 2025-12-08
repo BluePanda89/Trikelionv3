@@ -1,23 +1,22 @@
 // src/data/menu.ts
+// to solve no child error in Header component
 
-export const headerMenu = [
+export interface NavItem {
+    name: string;
+    link: string;
+    showArrow?: boolean;
+    children?: NavItem[];
+};
+// header no chiuld end
+
+export const headerMenu: NavItem[] = [
     { name: 'About Us', link: '/aboutus' },
     { name: 'Our Services', link: '/services' },
     { name: 'Our Training', link: '/training' },
-    //{ name: 'Style-Guide', link: '/style-guide', showArrow: false,
-    //    children: [
-    //        { name: 'Typography', link: '/style-guide#typography' },
-    //        { name: 'Colors', link: '/style-guide#colors' },
-    //        { name: 'Links', link: '/style-guide#links' },
-    //        { name: 'Buttons', link: '/style-guide#buttons' },
-    //        { name: 'Forms', link: '/style-guide#forms' },
-    //        { name: 'Lists', link: '/style-guide#lists' },
-    //    ]
-    //}
 ];
 
 export const footerMenu = [
-    { name: 'Contact Us', link: '/style-guide' },
+    { name: 'Contact Us', link: '/contact' },
 ];
 
 export const legalMenu = [
