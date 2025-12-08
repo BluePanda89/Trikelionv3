@@ -22,3 +22,14 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Others
+
+_wrangler.jsonc
+.editorconfig
+.prettierignore
+.prettierrc.json
+prettier.config.js
+.code-workspace
+_VICTORNOTE.md
+_README.md
