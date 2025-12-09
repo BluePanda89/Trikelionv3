@@ -7,8 +7,12 @@ export default {
       options: {
         parser: 'astro',
       },
-    },
+      files: '*.ts',
+      options: {
+        parser: 'typescript',
+      }
+    }
   ],
   singleQuote: true,
-  astroAllowShorthand: true,
+  astroAllowShorthand: false,
 }

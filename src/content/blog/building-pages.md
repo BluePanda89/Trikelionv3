@@ -1,15 +1,15 @@
 ---
-title: "Building pages with Titan Core components"
-excerpt: "Learn how to build pages with Titan Core components"
-featuredImage: "./images/building-pages.jpg"
-publishDate: "2025-02-22"
+title: 'Building pages with Titan Core components'
+excerpt: 'Learn how to build pages with Titan Core components'
+featuredImage: './images/building-pages.jpg'
+publishDate: '2025-02-22'
 publish: true
-categories: ["Theme Usage"]
+categories: ['Theme Usage']
 
 seo:
-  title: "How to build pages with Titan Core components"
-  description: "Learn how to build pages with Titan Core components"
-  image: "./images/building-pages.jpg"
+    title: 'How to build pages with Titan Core components'
+    description: 'Learn how to build pages with Titan Core components'
+    image: './images/building-pages.jpg'
 ---
 
 ## Titan Core Components

@@ -1,16 +1,17 @@
 ---
-import Layout from "@layouts/Layout.astro"
-import InnerHero from "@components/sections/InnerHero.astro"
-import TechSpecs from "./TechSpecs.astro"
+import Layout from '@layouts/Layout.astro';
+import InnerHero from '@components/sections/InnerHero.astro';
+import TableComponents from '@components/TableComponent.astro';
+import { trainingData } from '@data/TrainingData';
+import TrainingTable from '@components/sections/TrainingTable.astro';
 
 const heroContent = {
-    title: "Theme Info",
-    description: "Theme Info",
-}
+    title: 'List of Training',
+    description: 'Our Training Program',
+};
 ---
 
 <Layout>
     <InnerHero content={heroContent} />
-    <TechSpecs />
+    <TrainingTable />
 </Layout>
-

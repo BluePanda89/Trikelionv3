@@ -20,43 +20,38 @@ export interface Props {
 
 const {
     content: { eyebrow, headline, subheadline, logos },
-    background = 'base'
+    background = 'base',
 } = Astro.props;
 
 const bgColor = getBackgroundColor(background);
-const paddingClass = getPaddingClass({ 
+const paddingClass = getPaddingClass({
     padding: Astro.props.padding,
     paddingTop: Astro.props.paddingTop,
-    paddingBottom: Astro.props.paddingBottom 
+    paddingBottom: Astro.props.paddingBottom,
 });
-
 ---
 
-<section class:list={["relative", bgColor, paddingClass]}>
+<section class:list={['relative', bgColor, paddingClass]}>
     <div class="site-container px-4 text-center">
-        {eyebrow && (
-            <Eyebrow 
-                text={eyebrow} 
-                background={background} 
-                className="text-center"
-            />
-        )}
+        {eyebrow && <Eyebrow text={eyebrow} background={background} className="text-center" />}
         <div class="flex flex-wrap justify-center gap-8">
-            {logos.map((logo, index) => (
-                <div 
-                    class="logo-wrapper flex justify-center items-center w-64 h-40"
-                    data-aos="fade-up"
-                    data-aos-delay={index * 100}
-                >
-                    <Image 
-                        src={logo.src} 
-                        alt={logo.alt}
-                        class="h-40 md:h-40 w-auto object-contain object-center"
-                        width={200}
-                        height={80}
-                    />
-                </div>
-            ))}
+            {
+                logos.map((logo, index) => (
+                    <div
+                        class="logo-wrapper flex justify-center items-center w-64 h-40"
+                        data-aos="fade-up"
+                        data-aos-delay={index * 100}
+                    >
+                        <Image
+                            src={logo.src}
+                            alt={logo.alt}
+                            class="h-40 md:h-40 w-auto object-contain object-center"
+                            width={200}
+                            height={80}
+                        />
+                    </div>
+                ))
+            }
         </div>
     </div>
 </section>

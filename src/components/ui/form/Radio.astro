@@ -1,6 +1,6 @@
 ---
-import { getTextColor, getHeadlineColor, getBackgroundColor, getInputTextColor } from '../../../utils/styleUtils';
-import type { ThemeColor } from '../../../utils/styleUtils';
+import { getTextColor, getHeadlineColor, getBackgroundColor, getInputTextColor } from '@utils/styleUtils';
+import type { ThemeColor } from '@utils/styleUtils';
 
 interface Option {
     label: string;
@@ -17,50 +17,42 @@ interface Props {
     class?: string;
 }
 
-const { 
-    label, 
-    id,
-    name, 
-    options,
-    required = false,
-    background = 'base',
-    class: className = ''
-} = Astro.props;
+const { label, id, name, options, required = false, background = 'base', class: className = '' } = Astro.props;
 
 const labelClass = getHeadlineColor(background);
 const inputTextClass = getInputTextColor(background);
 const textClass = getTextColor(background);
 const bgClass = getBackgroundColor(background === 'dark' ? 'light' : 'base');
 ---
+
 <div class="form-group">
     <label class={`block text-sm font-medium mb-2 ${labelClass}`}>
         {label}
         {required && <span class="text-red-500">*</span>}
     </label>
     <div class="space-y-2">
-        {options.map((option, index) => (
-            <div class="flex items-center space-x-2">
-                <input
-                    type="radio"
-                    id={`${id}-${index}`}
-                    name={name}
-                    value={option.value}
-                    required={required}
-                    class={`
+        {
+            options.map((option, index) => (
+                <div class="flex items-center space-x-2">
+                    <input
+                        type="radio"
+                        id={`${id}-${index}`}
+                        name={name}
+                        value={option.value}
+                        required={required}
+                        class={`
                         h-4 w-4 
                         border-primary/20
                         text-primary 
                         focus:ring-primary 
                         ${className}
                     `}
-                />
-                <label 
-                    for={`${id}-${index}`}
-                    class={`text-sm font-medium ${inputTextClass}`}
-                >
-                    {option.label}
-                </label>
-            </div>
-        ))}
+                    />
+                    <label for={`${id}-${index}`} class={`text-sm font-medium ${inputTextClass}`}>
+                        {option.label}
+                    </label>
+                </div>
+            ))
+        }
     </div>
-</div> 
+</div>
