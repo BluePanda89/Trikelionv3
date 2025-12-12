@@ -1,4 +1,4 @@
-import heroImage from '@assets/images/home/default-hero-2.jpg';
+import heroImage from '@assets/images/mainpage_bg.png';
 import maingroupImage from '@assets/images/main-groupaboutus.png';
 import { featureLists } from '@data/features';
 import { statsLists } from '@data/stats';

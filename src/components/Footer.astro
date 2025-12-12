@@ -1,10 +1,12 @@
 ---
-import { footerMenu, legalMenu } from '@data/menu';
+//import { footerMenu, legalMenu } from '@data/menu';
+import { footerMenu, legalMenu, headerMenu } from '@data/menu';
 import Logo from '@components/Logo.astro';
 import Button from '@components/ui/Button.astro';
 import { Image } from 'astro:assets';
 import { siteConfig } from '@data/config';
 import footerLogo from '@assets/images/Tris_Logo_XL_Trans.png';
+import ctaBGImage from '@assets/images/cta_footer_bg.png';
 
 interface ButtonProps {
     text: string;
@@ -33,14 +35,22 @@ const defaultCta = {
         link: '/contact',
         target: '_blank',
     },
+    backgroundImage: ctaBGImage,
 };
 const cta = Astro.props.footerCta || defaultCta;
 const currentYear = new Date().getFullYear();
+
+// Helper to filter social links from config (excluding contact info which goes in Col 1)
+const socialLinks = Object.entries(siteConfig.Socials).filter(([key, value]) => {
+    // Exclude basic contact info and ensure value exists
+    return !['Email', 'Phone', 'Location'].includes(key) && value;
+});
 ---
 
 <footer class={`bg-black text-white pb-small ${cta.hideCta ? 'pt-large' : ''}`}>
     <div class="site-container mx-auto px-4">
-        
+
+     {/* CTA Section */}    
     {!cta.hideCta && (
       <div class="text-center border-b border-background-light mb-12 py-small">
         <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">{cta.title}</h2>
@@ -60,65 +70,104 @@ const currentYear = new Date().getFullYear();
       </div>
     )}
 
-        <div class="text-center grid grid-cols-4 md:grid-cols-1 gap-8 pb-8 border-b border-background-light">
-            <div class="column col-span-4">
+        <div class="text-center grid grid-cols-4 md:grid-cols-1 gap-8">
+            <div class="items-center column col-span-4">
                 <a href="/" class="inline-block">
-                    <Image src={footerLogo} alt={siteConfig.companyName} height={200} width={700}/>
+                    <Image src={footerLogo} alt={siteConfig.companyName} height={100} width={700}/>
                 </a>
                 <!--<p class="mt-4 text-center text-white">Empowering your digital journey with innovative solutions.</p> -->
             </div>
-      
-            <div class="column col-span-2">
-                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                <nav>
-                    <ul class="space-x-1">
-                        {
-                            footerMenu.map((item) => (
-                                <li>
-                                    <a href={item.link} class="text-body-dark hover:text-white transition-colors">
-                                        {item.name}
-                                    </a>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="column col-span-2">
-                <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-                <nav>
-                    <ul class="space-x-2">
-                        {
-                            footerMenu.map((item) => (
-                                <li>
-                                    <a href={item.link} class="text-body-dark hover:text-white transition-colors">
-                                        {item.name}
-                                    </a>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </nav>
-            </div>
         </div>
 
-        <div class="mt-8 flex flex-col md:flex-row justify-between items-center">
-            <div class="text-body-dark text-sm">
-                © {new Date().getFullYear()} {siteConfig.companyName}. All rights reserved.
+        {/* Main Footer Grid: 1 col on mobile, 4 cols on desktop */}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 text-center md:text-center border-b border-background-light">
+            
+            {/* Column 1: Company Information */}
+            <div class="column col-span-1 items-center md:items-start gap-4">
+                <div class="text-body-dark text-sm space-y-2">
+                    <p class="font-bold text-white">Contact Us</p>
+                    {siteConfig.Socials.Email && (
+                        <a href={`mailto:${siteConfig.Socials.Email}`} class="block hover:text-white transition-colors">
+                            {siteConfig.Socials.Email}
+                        </a>
+                    )}
+                    {siteConfig.Socials.Phone && (
+                        <a href={`tel:${siteConfig.Socials.Phone}`} class="block hover:text-white transition-colors">
+                            {siteConfig.Socials.Phone}
+                        </a>
+                    )}
+                </div>
+            </div>
+      
+            {/* Column 2: Social Media */}
+            <div class="column col-span-1 items-center md:items-start gap-4">
+                <h3 class="text-lg font-semibold mb-4 text-white">Follow Us</h3>
+                <nav>
+                    <ul class="space-y-2 text-body-dark">
+                        {socialLinks.length > 0 ? (
+                            socialLinks.map(([key, link]) => (
+                                <li>
+                                    <a href={link} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors capitalize">
+                                        {key.replace('xSocial', 'X (Twitter)')}
+                                    </a>
+                                </li>
+                            ))
+                        ) : (
+                            <li><span class="text-sm italic">Coming soon</span></li>
+                        )}
+                    </ul>
+                </nav>
             </div>
 
-            <nav class="mt-4 md:mt-0">
-                <ul class="flex flex-wrap gap-6">
-                    {
-                        legalMenu.map((item) => (
+            {/* Column 3: Site Map */}
+            <div class="column col-span-1 items-center md:items-start gap-4">
+                <h3 class="text-lg font-semibold mb-4 text-white">Site Map</h3>
+                <nav>
+                    <ul class="space-y-2 text-body-dark">
+                        {headerMenu.map((item) => (
                             <li>
-                                <a href={item.link} class="text-sm text-body-dark hover:text-white transition-colors">
+                                <a href={item.link} class="hover:text-white transition-colors">
                                     {item.name}
                                 </a>
                             </li>
-                        ))
-                    }
+                        ))}
+                        {/* Adding Contact here as well since it's a key page */}
+                        {footerMenu.map((item) => (
+                             <li>
+                                <a href={item.link} class="hover:text-white transition-colors">
+                                    {item.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- {/* Column 4: Reserved / Future Use */}
+            <div class="column col-span-1 items-center md:items-start gap-4">
+                {/* Reserved for future content */}
+                <h3 class="text-lg font-semibold mb-4 text-white opacity-0">Reserved</h3>
+                <div class="text-body-dark text-sm">
+                    {/* Placeholder content or leave empty */}
+                </div>
+            </div> -->
+        </div>
+
+        {/* Bottom Bar: Copyright & Legal */}
+        <div class="mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-body-dark text-sm text-center md:text-left">
+                &copy; {currentYear} {siteConfig.companyName}. All rights reserved.
+            </div>
+
+            <nav>
+                <ul class="flex flex-wrap gap-6 justify-center md:justify-end">
+                    {legalMenu.map((item) => (
+                        <li>
+                            <a href={item.link} class="text-sm text-body-dark hover:text-white transition-colors">
+                                {item.name}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </nav>
         </div>
