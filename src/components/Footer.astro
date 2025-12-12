@@ -1,9 +1,10 @@
 ---
 import { footerMenu, legalMenu } from '@data/menu';
-import Logo from '@components/Logo.astro';
+// import Logo from '@components/Logo.astro';
 //import Button from '@components/ui/Button.astro';
+import { Image } from 'astro:assets';
 import { siteConfig } from '@data/config';
-//import mainLogo from '@assets/images/home/Tris_Logo.png';
+import footerLogo from '@assets/images/Triskelion_transparent.png';
 
 interface ButtonProps {
     text: string;
@@ -20,10 +21,8 @@ interface Props {
     };
 }
 
-//const { defaultCta } = Astro.props;
-
-/* 
-const defaultCta = {
+// Default CTA Logic (kept commented as per your source, uncomment to enable)
+/* const defaultCta = {
     title: 'Start Your Learning Journey Now',
     description: 'Contact us to discover how our training can elevate your career and organisation.',
     hideCta: true,
@@ -32,19 +31,32 @@ const defaultCta = {
         link: '/contact',
         target: '_blank',
     },
-}; */
-
-// const cta = defaultCta;
-// const currentYear = new Date().getFullYear();
+};
+const cta = Astro.props.footerCta || defaultCta;
+*/
 ---
 
-<footer class={`text-white pt-large pb-large bg-footer-gradient`}>
+<footer class="text-white pt-large pb-large bg-footer-gradient">
     <div class="site-container mx-auto px-4">
+        
+        {/* Optional: CTA Section would go here */}
+
         <div class="grid grid-cols-4 md:grid-cols-4 gap-8 pb-8 border-b border-background-light">
             <div class="column col-span-4">
-                <Logo variant="footer" />
+                
+                {/* ✅ CUSTOM FOOTER LOGO */}
+                <a href="/" class="inline-block mb-4 transition-opacity hover:opacity-80">
+                    <Image 
+                        src={footerLogo} 
+                        alt={siteConfig.companyName} 
+                        height={40} 
+                        class="w-auto h-10 object-contain" 
+                    />
+                </a>
+
                 <p class="mt-4 text-white">Empowering your digital journey with innovative solutions.</p>
             </div>
+      
             <div class="column col-span-2">
                 <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                 <nav>
@@ -78,13 +90,11 @@ const defaultCta = {
                     </ul>
                 </nav>
             </div>
-
-            {/* Column 3 & 4 are currently empty. You can add more divs with class="col-span-1" here */}
         </div>
 
         <div class="mt-8 flex flex-col md:flex-row justify-between items-center">
             <div class="text-body-dark text-sm">
-                © 2024 {siteConfig.companyName}. All rights reserved.
+                © {new Date().getFullYear()} {siteConfig.companyName}. All rights reserved.
             </div>
 
             <nav class="mt-4 md:mt-0">

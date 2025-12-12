@@ -1,7 +1,7 @@
 {
     "extends": "astro/tsconfigs/strict",
     "include": [".astro/types.d.ts", "**/*"],
-    "exclude": ["dist", "git","github","vscode","node_modules"],
+    "exclude": ["dist", "git","github","vscode"],
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
@@ -12,7 +12,6 @@
             "@data/*": ["./src/data/*"],
             "@utils/*": ["./src/utils/*"],
             "@assets/*": ["./src/assets/*"],
-            "@src/*"    : ["./src/*"]   
         }
     }
 }
