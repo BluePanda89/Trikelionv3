@@ -1,5 +1,12 @@
 ---
-// Get the category and list of courses passed to this component
+// src/components/TableComponent.astro
+import type { Course } from '@data/TrainingData';
+
+interface Props {
+    category: string;
+    courses: Course[];
+}
+
 const { category, courses } = Astro.props;
 ---
 
@@ -21,16 +28,26 @@ const { category, courses } = Astro.props;
                 {
                     courses.map((course) => (
                         <tr>
-                            <td class="font-bold text-primary">{course.name}</td>
-                            <td>
+                            <td class="course-name">
+                                <span class="name-text">{course.name}</span>
+                                {/* Mobile-only details show up here on small screens */}
+                                <div class="mobile-meta">
+                                    {course.certified ? (
+                                        <span class="badge badge-cert">Certified</span>
+                                    ) : (
+                                        <span class="badge badge-workshop">Workshop</span>
+                                    )}
+                                </div>
+                            </td>
+                            <td class="status-cell">
                                 {course.certified ? (
                                     <span class="badge badge-cert">Certified</span>
                                 ) : (
                                     <span class="badge badge-workshop">Workshop</span>
                                 )}
                             </td>
-                            <td class="text-sm">{course.type}</td>
-                            <td class="text-sm">
+                            <td class="type-cell">{course.type}</td>
+                            <td class="details-cell">
                                 <div class="detail-row">
                                     <span class="icon">⏳</span> {course.duration}
                                 </div>
@@ -38,7 +55,7 @@ const { category, courses } = Astro.props;
                                     <span class="icon">📍</span> {course.method}
                                 </div>
                             </td>
-                            <td class="text-sm text-muted">{course.description}</td>
+                            <td class="desc-cell">{course.description}</td>
                         </tr>
                     ))
                 }
@@ -46,3 +63,150 @@ const { category, courses } = Astro.props;
         </table>
     </div>
 </div>
+
+<style>
+    /* Section Container */
+    .course-section {
+        margin-bottom: 4rem;
+        width: 100%;
+    }
+
+    /* Category Header */
+    .category-header {
+        font-family: var(--font-headline, sans-serif);
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--color-headline, #1a1f3c);
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--color-primary, #d4af37);
+        display: inline-block;
+    }
+
+    /* Table Wrapper for Responsiveness */
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        background: white;
+        border: 1px solid #e2e8f0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        min-width: 800px; /* Forces scroll on mobile */
+    }
+
+    /* Header Styling */
+    thead {
+        background-color: var(--color-background-light, #f8f9fa);
+        border-bottom: 2px solid #e2e8f0;
+    }
+
+    th {
+        padding: 1rem 1.5rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--color-body-light, #64748b);
+    }
+
+    /* Body Styling */
+    td {
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid #e2e8f0;
+        vertical-align: top;
+        color: var(--color-body-base, #334155);
+        font-size: 0.95rem;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    tr:hover {
+        background-color: #f8fafc;
+    }
+
+    /* Column Specifics */
+    .col-name { width: 25%; }
+    .col-status { width: 15%; }
+    .col-type { width: 15%; }
+    .col-details { width: 15%; }
+    .col-desc { width: 30%; }
+
+    /* Typography inside cells */
+    .name-text {
+        font-weight: 700;
+        color: var(--color-primary-dark, #997300);
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .type-cell {
+        font-weight: 500;
+    }
+
+    .desc-cell {
+        color: #64748b;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Details (Duration/Location) */
+    .detail-row {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.25rem;
+        white-space: nowrap;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+
+    .icon {
+        font-size: 1rem;
+        opacity: 0.8;
+    }
+
+    /* Badges (Pills) */
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+    }
+
+    /* Certified: Greenish/Teal */
+    .badge-cert {
+        background-color: #d1fae5; /* Light Green */
+        color: #065f46; /* Dark Green */
+        border: 1px solid #a7f3d0;
+    }
+
+    /* Workshop: Blue/Gray */
+    .badge-workshop {
+        background-color: #eff6ff; /* Light Blue */
+        color: #1e40af; /* Dark Blue */
+        border: 1px solid #bfdbfe;
+    }
+
+    /* Mobile Handling */
+    .mobile-meta {
+        display: none; /* Hidden on desktop */
+    }
+
+    @media (max-width: 768px) {
+        /* On mobile, we might want to hide less important columns or adjust layout */
+        /* Currently using overflow-x scroll, which is safe for tables */
+    }
+</style>
