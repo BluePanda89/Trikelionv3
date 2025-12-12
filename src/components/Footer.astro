@@ -1,10 +1,10 @@
 ---
 import { footerMenu, legalMenu } from '@data/menu';
-// import Logo from '@components/Logo.astro';
-//import Button from '@components/ui/Button.astro';
+import Logo from '@components/Logo.astro';
+import Button from '@components/ui/Button.astro';
 import { Image } from 'astro:assets';
 import { siteConfig } from '@data/config';
-import footerLogo from '@assets/images/Triskelion_transparent.png';
+import footerLogo from '@assets/images/Tris_Logo_XL_Trans.png';
 
 interface ButtonProps {
     text: string;
@@ -21,8 +21,10 @@ interface Props {
     };
 }
 
+const { footerCta } = Astro.props;
+
 // Default CTA Logic (kept commented as per your source, uncomment to enable)
-/* const defaultCta = {
+const defaultCta = {
     title: 'Start Your Learning Journey Now',
     description: 'Contact us to discover how our training can elevate your career and organisation.',
     hideCta: true,
@@ -33,28 +35,37 @@ interface Props {
     },
 };
 const cta = Astro.props.footerCta || defaultCta;
-*/
+const currentYear = new Date().getFullYear();
 ---
 
-<footer class="text-white pt-large pb-large bg-footer-gradient">
+<footer class={`bg-black text-white pb-small ${cta.hideCta ? 'pt-large' : ''}`}>
     <div class="site-container mx-auto px-4">
         
-        {/* Optional: CTA Section would go here */}
+    {!cta.hideCta && (
+      <div class="text-center border-b border-background-light mb-12 py-small">
+        <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">{cta.title}</h2>
+        <p class="text-white mb-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          {cta.description}
+        </p>
+        <Button 
+          href={cta.button.link} 
+          variant="ghostLight"
+          size="lg"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          {...(cta.button.target && { target: cta.button.target })}
+        >
+          {cta.button.text}
+        </Button>
+      </div>
+    )}
 
-        <div class="grid grid-cols-4 md:grid-cols-4 gap-8 pb-8 border-b border-background-light">
+        <div class="text-center grid grid-cols-4 md:grid-cols-1 gap-8 pb-8 border-b border-background-light">
             <div class="column col-span-4">
-                
-                {/* ✅ CUSTOM FOOTER LOGO */}
-                <a href="/" class="inline-block mb-4 transition-opacity hover:opacity-80">
-                    <Image 
-                        src={footerLogo} 
-                        alt={siteConfig.companyName} 
-                        height={40} 
-                        class="w-auto h-10 object-contain" 
-                    />
+                <a href="/" class="inline-block">
+                    <Image src={footerLogo} alt={siteConfig.companyName} height={200} width={700}/>
                 </a>
-
-                <p class="mt-4 text-white">Empowering your digital journey with innovative solutions.</p>
+                <p class="mt-4 text-center text-white">Empowering your digital journey with innovative solutions.</p>
             </div>
       
             <div class="column col-span-2">
