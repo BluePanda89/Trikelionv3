@@ -1,0 +1,99 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/sections/Hero.astro';
+import InnerHero from '@components/sections/InnerHero.astro';
+import heroImage from '@assets/images/home/default-hero-2.jpg';
+// import Features from '@components/sections/Features.astro';
+// import { FeatureList } from '@data/features';
+//import styleGuideImage from '@assets/images/aboutus_training.jpg';
+import SerRefImg01 from '@assets/images/services_ref_01.png';
+import SerRefImg02 from '@assets/images/services_ref_02.png';
+import SerRefImg03 from '@assets/images/services_ref_03.png';
+import SerRefImg04 from '@assets/images/services_ref_04.png';
+//import founderImage from '@assets/images/aboutus_george.png';
+import SplitPanel from '@components/sections/SplitPanel.astro';
+//import ContactInfo from "@components/sections/ContactInfo.astro";
+
+const heroContent = {
+    title: 'Our Services',
+    //description: 'Unlock potential with tailored training programs designed for today’s dynamic business environment.',
+    backgroundImage: heroImage,
+    overlayOpacity: 0.2,
+};
+
+const styleGuideSection = {
+    headline: 'Corporate Training',
+    description:
+        'Our corporate training programmes are designed to align with your business goals, ensuring that employees gain practical skills that drive productivity and foster growth within your organisation.',
+    image: {
+        src: SerRefImg01,
+        alt: 'sevrefimg01',
+    },
+    buttons: [
+        {
+            text: 'Contact ',
+            link: '/contactus',
+            variant: 'primary' as const,
+        },
+    ],
+};
+
+const styleGuideSection2 = {
+    headline: 'Professional Development',
+    description:
+        'We offer a variety of professional development paths that focus on personal skills enhancement and career progression, enabling your workforce to adapt and excel in a competitive environment.',
+    image: {
+        src: SerRefImg02,
+        alt: 'sevrefimg0',
+    },
+    buttons: [
+        {
+            text: 'Contact ',
+            link: '/contactus',
+            variant: 'primary' as const,
+        },
+    ],
+};
+
+const styleGuideSection3 = {
+    headline: 'Certification Programs',
+    description:
+        'Our certification programmes are designed to equip individuals with the credentials they need for career advancement, covering essential skills and knowledge relevant to today’s job market. @ 2021.',
+    image: {
+        src: SerRefImg03,
+        alt: 'sevrefimg03',
+    },
+    buttons: [
+        {
+            text: 'Contact ',
+            link: '/contactus',
+            variant: 'primary' as const,
+        },
+    ],
+};
+
+const styleGuideSection4 = {
+    headline: 'Team Building',
+    description:
+        'We facilitate engaging team-building activities tailored to strengthen collaboration, communication, and trust among team members, enhancing overall performance and work culture within your organisation.',
+    image: {
+        src: SerRefImg04,
+        alt: 'sevrefimg04',
+    },
+    buttons: [
+        {
+            text: 'Contact',
+            link: '/contactus',
+            variant: 'primary' as const,
+        },
+    ],
+};
+---
+
+<Layout title="About Us" description="Company Profile">
+    <Hero content={heroContent} />
+    <SplitPanel content={styleGuideSection} imagePosition="right" background="light" padding="small" />
+    <SplitPanel content={styleGuideSection2} imagePosition="left" background="base" padding="small" />
+    <SplitPanel content={styleGuideSection3} imagePosition="right" background="light" padding="small" />
+    <SplitPanel content={styleGuideSection4} imagePosition="left" background="base" padding="small" />
+</Layout>

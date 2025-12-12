@@ -1,0 +1,646 @@
+{
+    "knownSymbols": {
+        "categories": [
+            {
+                "name": "categories",
+                "module": "@data/categories",
+                "isDefault": false
+            },
+            {
+                "name": "categories",
+                "path": "@src/data/categories.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "getCategoryBySlug": [
+            {
+                "name": "getCategoryBySlug",
+                "path": "@src/data/categories.ts",
+                "type": "function",
+                "isDefault": false
+            }
+        ],
+        "Feature": [
+            {
+                "name": "Feature",
+                "path": "@src/data/features.ts",
+                "type": "interface",
+                "isDefault": false
+            }
+        ],
+        "FeatureList": [
+            {
+                "name": "FeatureList",
+                "path": "@src/data/features.ts",
+                "type": "interface",
+                "isDefault": false
+            }
+        ],
+        "featureLists": [
+            {
+                "name": "featureLists",
+                "path": "@src/data/features.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "Zap": [
+            {
+                "name": "Zap",
+                "module": "lucide-astro",
+                "isDefault": false
+            }
+        ],
+        "Shield": [
+            {
+                "name": "Shield",
+                "module": "lucide-astro",
+                "isDefault": false
+            }
+        ],
+        "Heart": [
+            {
+                "name": "Heart",
+                "module": "lucide-astro",
+                "isDefault": false
+            }
+        ],
+        "Coffee": [
+            {
+                "name": "Coffee",
+                "module": "lucide-astro",
+                "isDefault": false
+            }
+        ],
+        "Smile": [
+            {
+                "name": "Smile",
+                "module": "lucide-astro",
+                "isDefault": false
+            }
+        ],
+        "Type": [
+            {
+                "name": "Type",
+                "module": "lucide-astro",
+                "isDefault": false
+            }
+        ],
+        "TabletSmartphone": [
+            {
+                "name": "TabletSmartphone",
+                "module": "lucide-astro",
+                "isDefault": false
+            }
+        ],
+        "CodeXml": [
+            {
+                "name": "CodeXml",
+                "module": "lucide-astro",
+                "isDefault": false
+            }
+        ],
+        "headerMenu": [
+            {
+                "name": "headerMenu",
+                "path": "@src/data/menu.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "footerMenu": [
+            {
+                "name": "footerMenu",
+                "path": "@src/data/menu.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "legalMenu": [
+            {
+                "name": "legalMenu",
+                "path": "@src/data/menu.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "FaqItem": [
+            {
+                "name": "FaqItem",
+                "path": "@src/data/faqs.ts",
+                "type": "interface",
+                "isDefault": false
+            }
+        ],
+        "FaqList": [
+            {
+                "name": "FaqList",
+                "path": "@src/data/faqs.ts",
+                "type": "interface",
+                "isDefault": false
+            }
+        ],
+        "faqLists": [
+            {
+                "name": "faqLists",
+                "path": "@src/data/faqs.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "Stat": [
+            {
+                "name": "Stat",
+                "path": "@src/data/stats.ts",
+                "type": "interface",
+                "isDefault": false
+            }
+        ],
+        "StatsList": [
+            {
+                "name": "StatsList",
+                "path": "@src/data/stats.ts",
+                "type": "interface",
+                "isDefault": false
+            }
+        ],
+        "statsLists": [
+            {
+                "name": "statsLists",
+                "path": "@src/data/stats.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "type { ImageMetadata": [
+            {
+                "name": "type { ImageMetadata",
+                "module": "astro",
+                "isDefault": true
+            }
+        ],
+        "PaddingSize": [
+            {
+                "name": "PaddingSize",
+                "path": "@src/utils/styleUtils.ts",
+                "type": "type",
+                "isDefault": false
+            }
+        ],
+        "ThemeColor": [
+            {
+                "name": "ThemeColor",
+                "path": "@src/utils/styleUtils.ts",
+                "type": "type",
+                "isDefault": false
+            }
+        ],
+        "getPaddingClass": [
+            {
+                "name": "getPaddingClass",
+                "path": "@src/utils/styleUtils.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "getBackgroundColor": [
+            {
+                "name": "getBackgroundColor",
+                "path": "@src/utils/styleUtils.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "getTextColor": [
+            {
+                "name": "getTextColor",
+                "path": "@src/utils/styleUtils.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "getHeadlineColor": [
+            {
+                "name": "getHeadlineColor",
+                "path": "@src/utils/styleUtils.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "getEyebrowColor": [
+            {
+                "name": "getEyebrowColor",
+                "path": "@src/utils/styleUtils.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "getInputBackgroundColor": [
+            {
+                "name": "getInputBackgroundColor",
+                "path": "@src/utils/styleUtils.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "getInputTextColor": [
+            {
+                "name": "getInputTextColor",
+                "path": "@src/utils/styleUtils.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "collections": [
+            {
+                "name": "collections",
+                "path": "@src/content.config.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "defineCollection": [
+            {
+                "name": "defineCollection",
+                "module": "astro:content",
+                "isDefault": false
+            }
+        ],
+        "z": [
+            {
+                "name": "z",
+                "module": "astro:content",
+                "isDefault": false
+            }
+        ],
+        "glob": [
+            {
+                "name": "glob",
+                "module": "astro/loaders",
+                "isDefault": false
+            }
+        ],
+        "siteConfig": [
+            {
+                "name": "siteConfig",
+                "path": "@src/data/config.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "SEO": [
+            {
+                "name": "SEO",
+                "path": "@src/data/config.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "blogSetting": [
+            {
+                "name": "blogSetting",
+                "path": "@src/data/config.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "themeSetting": [
+            {
+                "name": "themeSetting",
+                "path": "@src/data/config.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "dynamically": [
+            {
+                "name": "dynamically",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-H42dfA/middleware-loader.entry.ts",
+                "isDefault": false
+            }
+        ],
+        "a": [
+            {
+                "name": "a",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-H42dfA/middleware-loader.entry.ts",
+                "isDefault": false
+            }
+        ],
+        "WRAPPED_ENTRY": [
+            {
+                "name": "WRAPPED_ENTRY",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-H42dfA/middleware-loader.entry.ts",
+                "isDefault": true
+            }
+        ],
+        "ENTRY": [
+            {
+                "name": "ENTRY",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-H42dfA/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "ENTRY",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-MBTNL9/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "ENTRY",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-E88Z0W/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "ENTRY",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-pw0L3o/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "ENTRY",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-yf0h3p/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "ENTRY",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-NEd12L/middleware-insertion-facade.js",
+                "isDefault": true
+            }
+        ],
+        "{ __INTERNAL_WRANGLER_MIDDLEWARE__": [
+            {
+                "name": "{ __INTERNAL_WRANGLER_MIDDLEWARE__",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-H42dfA/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "{ __INTERNAL_WRANGLER_MIDDLEWARE__",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-MBTNL9/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "{ __INTERNAL_WRANGLER_MIDDLEWARE__",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-E88Z0W/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "{ __INTERNAL_WRANGLER_MIDDLEWARE__",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-pw0L3o/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "{ __INTERNAL_WRANGLER_MIDDLEWARE__",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-yf0h3p/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "{ __INTERNAL_WRANGLER_MIDDLEWARE__",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-NEd12L/middleware-insertion-facade.js",
+                "isDefault": true
+            }
+        ],
+        "__facade_invoke__": [
+            {
+                "name": "__facade_invoke__",
+                "module": "/Users/waikitong168/Projects/triskelionv3/node_modules/wrangler/templates/middleware/common.ts",
+                "isDefault": false
+            }
+        ],
+        "__facade_register__": [
+            {
+                "name": "__facade_register__",
+                "module": "/Users/waikitong168/Projects/triskelionv3/node_modules/wrangler/templates/middleware/common.ts",
+                "isDefault": false
+            }
+        ],
+        "Dispatcher": [
+            {
+                "name": "Dispatcher",
+                "module": "/Users/waikitong168/Projects/triskelionv3/node_modules/wrangler/templates/middleware/common.ts",
+                "isDefault": false
+            }
+        ],
+        "type { WorkerEntrypointConstructor": [
+            {
+                "name": "type { WorkerEntrypointConstructor",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-H42dfA/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "type { WorkerEntrypointConstructor",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-MBTNL9/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "type { WorkerEntrypointConstructor",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-E88Z0W/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "type { WorkerEntrypointConstructor",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-pw0L3o/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "type { WorkerEntrypointConstructor",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-yf0h3p/middleware-insertion-facade.js",
+                "isDefault": true
+            },
+            {
+                "name": "type { WorkerEntrypointConstructor",
+                "module": "/Users/waikitong168/Projects/triskelionv3/.wrangler/tmp/bundle-NEd12L/middleware-insertion-facade.js",
+                "isDefault": true
+            }
+        ],
+        "mainlogo": [
+            {
+                "name": "mainlogo",
+                "module": "..\n\n\nexport interface Logo {\n    src: ImageMetadata;\n    alt: string; // The partner company",
+                "isDefault": true
+            }
+        ],
+        "Logo": [
+            {
+                "name": "Logo",
+                "path": "@src/data/logos.ts",
+                "type": "interface",
+                "isDefault": false
+            }
+        ],
+        "LogoList": [
+            {
+                "name": "LogoList",
+                "path": "@src/data/logos.ts",
+                "type": "interface",
+                "isDefault": false
+            }
+        ],
+        "logoLists": [
+            {
+                "name": "logoLists",
+                "path": "@src/data/logos.ts",
+                "type": "const",
+                "isDefault": false
+            }
+        ],
+        "RenderResult": [
+            {
+                "name": "RenderResult",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "interface",
+                "isDefault": false
+            }
+        ],
+        "RenderedContent": [
+            {
+                "name": "RenderedContent",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "interface",
+                "isDefault": false
+            }
+        ],
+        "CollectionKey": [
+            {
+                "name": "CollectionKey",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "type",
+                "isDefault": false
+            }
+        ],
+        "CollectionEntry": [
+            {
+                "name": "CollectionEntry",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "type",
+                "isDefault": false
+            }
+        ],
+        "ContentCollectionKey": [
+            {
+                "name": "ContentCollectionKey",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "type",
+                "isDefault": false
+            }
+        ],
+        "DataCollectionKey": [
+            {
+                "name": "DataCollectionKey",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "type",
+                "isDefault": false
+            }
+        ],
+        "ReferenceDataEntry": [
+            {
+                "name": "ReferenceDataEntry",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "type",
+                "isDefault": false
+            }
+        ],
+        "ReferenceContentEntry": [
+            {
+                "name": "ReferenceContentEntry",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "type",
+                "isDefault": false
+            }
+        ],
+        "ReferenceLiveEntry": [
+            {
+                "name": "ReferenceLiveEntry",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "type",
+                "isDefault": false
+            }
+        ],
+        "getEntryBySlug": [
+            {
+                "name": "getEntryBySlug",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "function",
+                "isDefault": false
+            }
+        ],
+        "getDataEntryById": [
+            {
+                "name": "getDataEntryById",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "function",
+                "isDefault": false
+            }
+        ],
+        "getCollection": [
+            {
+                "name": "getCollection",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "function",
+                "isDefault": false
+            }
+        ],
+        "getLiveCollection": [
+            {
+                "name": "getLiveCollection",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "function",
+                "isDefault": false
+            }
+        ],
+        "getEntry": [
+            {
+                "name": "getEntry",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "function",
+                "isDefault": false
+            }
+        ],
+        "getLiveEntry": [
+            {
+                "name": "getLiveEntry",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "function",
+                "isDefault": false
+            }
+        ],
+        "getEntries": [
+            {
+                "name": "getEntries",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "function",
+                "isDefault": false
+            }
+        ],
+        "render": [
+            {
+                "name": "render",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "function",
+                "isDefault": false
+            }
+        ],
+        "reference": [
+            {
+                "name": "reference",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "function",
+                "isDefault": false
+            }
+        ],
+        "ContentConfig": [
+            {
+                "name": "ContentConfig",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "type",
+                "isDefault": false
+            }
+        ],
+        "LiveContentConfig": [
+            {
+                "name": "LiveContentConfig",
+                "path": "/Users/waikitong168/Projects/triskelionv3/.astro/content.d.ts",
+                "type": "type",
+                "isDefault": false
+            }
+        ]
+    }
+}

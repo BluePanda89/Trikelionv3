@@ -1,0 +1,48 @@
+---
+// Get the category and list of courses passed to this component
+const { category, courses } = Astro.props;
+---
+
+<div class="course-section">
+    <h2 class="category-header">{category}</h2>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-name">Course Name</th>
+                    <th class="col-status">Status</th>
+                    <th class="col-type">Type</th>
+                    <th class="col-details">Details</th>
+                    <th class="col-desc">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    courses.map((course) => (
+                        <tr>
+                            <td class="font-bold text-primary">{course.name}</td>
+                            <td>
+                                {course.certified ? (
+                                    <span class="badge badge-cert">Certified</span>
+                                ) : (
+                                    <span class="badge badge-workshop">Workshop</span>
+                                )}
+                            </td>
+                            <td class="text-sm">{course.type}</td>
+                            <td class="text-sm">
+                                <div class="detail-row">
+                                    <span class="icon">⏳</span> {course.duration}
+                                </div>
+                                <div class="detail-row">
+                                    <span class="icon">📍</span> {course.method}
+                                </div>
+                            </td>
+                            <td class="text-sm text-muted">{course.description}</td>
+                        </tr>
+                    ))
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

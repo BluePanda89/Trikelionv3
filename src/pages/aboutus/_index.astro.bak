@@ -1,0 +1,16 @@
+---
+import Layout from "@layouts/Layout.astro"
+import InnerHero from "@components/sections/InnerHero.astro"
+import TechSpecs from "./AboutUs.astro"
+
+const heroContent = {
+    title: "About Us",
+    description: "Who We Are",
+}
+---
+
+<Layout>
+    <InnerHero content={heroContent} />
+    <TechSpecs />
+</Layout>
+

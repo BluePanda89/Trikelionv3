@@ -1,0 +1,30 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/sections/Hero.astro';
+import SplitPanel from '@components/sections/SplitPanel.astro';
+import Features from '@components/sections/Features.astro';
+import Stats from '@components/sections/Stats.astro';
+import Logos from '@components/sections/Logos.astro';
+
+// ✅ New Clean Import
+import {
+    seoTitle,
+    seoDescription,
+    heroContent,
+    featuresSection,
+    featuresSection2,
+    styleGuideSection,
+    sideBySideStats,
+    logosSection,
+    FooterCta,
+} from '@data/home';
+---
+
+<Layout footerCta={FooterCta} title={seoTitle} description={seoDescription}>
+    <Hero content={heroContent} />
+    <Features content={featuresSection} padding="small" background="light" />
+    <SplitPanel content={styleGuideSection} imagePosition="right" background="base" padding="small" />
+    <Features content={featuresSection2} padding="small" background="light" />
+    <Stats content={sideBySideStats} background="base" padding="base" />
+    <Logos content={logosSection} background="light" padding="small" />
+</Layout>
